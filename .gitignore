@@ -1,0 +1,99 @@
+# Build results
+
+bin/
+obj/
+
+# Visual Studio
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+
+.idea/
+*.sln.iml
+
+# VS Code
+
+.vscode/
+
+# Logs
+
+*.log
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# NuGet
+
+*.nupkg
+*.snupkg
+packages/
+
+# Uncomment if you use local packages folder
+
+# !packages/build/
+
+# Test results
+
+TestResults/
+
+# Coverage
+
+coverage/
+*.coverage
+*.coveragexml
+
+# Publish output
+
+publish/
+
+# Azure
+
+*.azurePubxml
+
+# Resharper
+
+_ReSharper*/
+*.DotSettings.user
+
+# Dotnet tools
+
+.dotnet/
+
+# Generated files
+
+*.g.cs
+*.g.i.cs
+
+# Backup & temp files
+
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Database files
+
+*.mdf
+*.ldf
+
+# Local config (optional – be careful)
+
+appsettings.Development.json
+appsettings.Local.json
+
+# Node (if frontend included, e.g. Angular)
+
+node_modules/
+dist/
+
+# Environment files
+
+.env
+.env.*
