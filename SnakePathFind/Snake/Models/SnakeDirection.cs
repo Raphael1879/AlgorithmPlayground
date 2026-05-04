@@ -1,5 +1,4 @@
-﻿using SnakePathFind.Snake;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,7 +9,7 @@ using System.Threading.Tasks;
 
 
 
-namespace SnakePathFind.Snake
+namespace SnakePathFind.Snake.Models
 {
     public enum SnakeDirection
     {

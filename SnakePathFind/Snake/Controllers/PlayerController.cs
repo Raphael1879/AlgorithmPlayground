@@ -1,7 +1,8 @@
-﻿using System.Drawing;
+﻿using SnakePathFind.Snake.Models;
+using System.Drawing;
 
 
-namespace SnakePathFind.Snake
+namespace SnakePathFind.Snake.Controllers
 {
     public class PlayerController : ISnakeController
     {

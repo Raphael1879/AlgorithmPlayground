@@ -1,7 +1,7 @@
 using SnakePathFind.Snake;
 using System.Drawing;
 
-namespace SnakePathFind; 
+namespace SnakePathFind.Snake.Controllers; 
 
 public interface ISnakeController
 {

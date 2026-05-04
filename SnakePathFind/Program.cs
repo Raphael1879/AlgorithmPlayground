@@ -1,8 +1,8 @@
-﻿using SnakePathFind;
+﻿using SnakePathFind.Snake.Controllers;
 using SnakePathFind.Snake;
 
 
-var controller = new PlayerController();
+var controller = new SvenController();
 
 var game = new SnakeGame() { Width = 10, Height = 10, TickRate = 16, Controller = controller };
 

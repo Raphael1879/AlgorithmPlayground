@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using SnakePathFind.Snake.Controllers;
+using SnakePathFind.Snake.Models;
+using System.Drawing;
 namespace SnakePathFind.Snake
 {
     public class SnakeGame
@@ -42,11 +44,7 @@ namespace SnakePathFind.Snake
             var nextDirection = CurrentDirection;
 
             var head = Snake.FirstOrDefault();
-            var newHead = new Point
-            {
-                X = head.X + nextDirection.X,
-                Y = head.Y + nextDirection.Y
-            };
+            var newHead = head.Add(nextDirection);
 
            
             if (IsOutOfBounds(newHead) || Snake.Contains(newHead))
