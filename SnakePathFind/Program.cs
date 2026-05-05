@@ -2,7 +2,7 @@
 using SnakePathFind.Snake;
 
 
-var controller = new BogusController();
+var controller = new OptimizedSolver();
 
 var game = new SnakeGame() { Width = 15, Height = 10, TickRate = 1, Controller = controller };
 
