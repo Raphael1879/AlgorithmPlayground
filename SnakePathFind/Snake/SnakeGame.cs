@@ -114,12 +114,12 @@ namespace SnakePathFind.Snake
 
         private Point GetFoodPosition()
         {
-            var randomPoint = new Point(Random.Shared.Next(0, Width - 1), Random.Shared.Next(0, Height - 1));
+            var randomPoint = new Point(Random.Shared.Next(0, Width), Random.Shared.Next(0, Height));
 
           
             while (Snake.Contains(randomPoint) || Food.Contains(randomPoint))
             {
-                randomPoint = new Point(Random.Shared.Next(0, Width - 1), Random.Shared.Next(0, Height - 1));
+                randomPoint = new Point(Random.Shared.Next(0, Width), Random.Shared.Next(0, Height));
             }
 
             return randomPoint;
@@ -137,12 +137,12 @@ namespace SnakePathFind.Snake
             _remainingFramesToTick = TickRate;
             Food.Clear();
             Snake.Clear();
-            Snake.Add(new Point { X = 5, Y = 5 });
+            Snake.Add(new Point { X = 1, Y = 1 });
             Food.Add(GetFoodPosition());
 
         }
 
-        private bool IsOutOfBounds(Point point)
+        public bool IsOutOfBounds(Point point)
         {
             return point.X > Width - 1 || point.X < 0 || point.Y < 0 || point.Y > Height - 1;
         }

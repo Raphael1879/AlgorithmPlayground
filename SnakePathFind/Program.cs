@@ -2,9 +2,9 @@
 using SnakePathFind.Snake;
 
 
-var controller = new SvenController();
+var controller = new BogusController();
 
-var game = new SnakeGame() { Width = 10, Height = 10, TickRate = 16, Controller = controller };
+var game = new SnakeGame() { Width = 15, Height = 10, TickRate = 1, Controller = controller };
 
 while (true)
 {
