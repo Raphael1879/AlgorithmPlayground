@@ -15,7 +15,7 @@ namespace SnakePathFind.Snake.Controllers
         public void IncreaseStep() {
             steps += 1;
             if (steps % 100000 == 0) {
-                Console.WriteLine($"{steps} steps checked")
+                Console.WriteLine($"{steps} steps checked");
             }
         }
     }
@@ -25,7 +25,7 @@ namespace SnakePathFind.Snake.Controllers
         private Point? _target;
         private List<Point>? _path;
         private SnakeGame? _game;
-        private bool _looked = false
+        private bool _looked = false;
 
         private SnakeDirection[] _directions = { SnakeDirection.Up, SnakeDirection.Left, SnakeDirection.Down, SnakeDirection.Right };
 
@@ -33,7 +33,7 @@ namespace SnakePathFind.Snake.Controllers
         {
             Point start = gameInstance.Snake[0];
             _game = gameInstance;
-            _target = gameInstance.Snake[0]
+            _target = gameInstance.Snake[0];
 
             if (_path is null && _looked == false)
             {
@@ -53,19 +53,19 @@ namespace SnakePathFind.Snake.Controllers
                 }
             }
 
-            if (_path is null) {
-                var currentPathIndex = _path!.FindIndex(p => p.Equals(head));
+            if (_path is not null) {
+                var currentPathIndex = _path!.FindIndex(p => p.Equals(start));
                 var nextIndex = currentPathIndex + 1;
                 if(nextIndex == _path.Count)
                 {
                     nextIndex = 0;
                 }
                 var nextPathPoint = _path.ElementAt(nextIndex);
-                return nextPathPoint.Sub(head);
+                return nextPathPoint.Sub(start);
             } 
             else 
             {
-                return _directions[0];
+                return Constants.SankeDirectionLookup[_directions[0]];
             }
         }
 
@@ -107,7 +107,7 @@ namespace SnakePathFind.Snake.Controllers
 
         private bool IsTraversed(Dictionary<Point, bool> currentDiscovery, Point pos)
         {
-            return currentDiscovery!.Contains(pos);
+            return currentDiscovery.ContainsKey(pos);
         }
 
         private bool CheckIfFullyTraversed(Stack<Point> currentPath)

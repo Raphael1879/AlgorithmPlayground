@@ -4,7 +4,7 @@ using SnakePathFind.Snake;
 
 var controller = new OptimizedSolver();
 
-var game = new SnakeGame() { Width = 15, Height = 10, TickRate = 1, Controller = controller };
+var game = new SnakeGame() { Width = 8, Height = 8, TickRate = 1, Controller = controller };
 
 while (true)
 {
